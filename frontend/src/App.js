@@ -1,12 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import {Cards} from './Elements/Cards';
+import React, { useEffect, useState } from 'react'
+import axios from 'axios'
 
-function App() {
+const App = () => {
+
+  const [heroes, setHeroes] = useState([])
+  useEffect(() => {
+    axios.get('http://localhost:3004/')
+      .then(res => setHeroes(res.data))
+      .catch(err => console.log(err));
+  }, [])
+
   return (
-    <div className="App">
-      
-    </div>
-  );
+    <>
+      <div>
+        <Cards results={heroes} />
+      </div>
+    </>
+  )
+
 }
 
 export default App;
