@@ -4,23 +4,23 @@ import { useState, useEffect } from "react";
 
 export const CardHeroe = ({url}) => {
 
-    const [heroe, setHeroes] = useState([])
+    const [hero, setHeroe] = useState([])
     useEffect(() => {
-        axios.get(`http://localhost:3004/heroe/${url}`)
-            .then(res => setHeroes(Object.values(res.data)))
+        axios.get(`http://localhost:3004/hero/${url}`)
+            .then(res => setHeroe(Object.values(res.data)))
             .catch(err => console.log(err));
     }, [])
 
     return(
         <div>
             {
-                heroe.map(heroe => (
-                    <div className="card" key={heroe.id}>
+                hero.map(hero => (
+                    <div className="card text-center" key={hero.id}>
                         <div className='card-header'>
-                            <h5 className="card-title">{heroe.name}</h5>
+                            <h5 className="card-title">{hero.name}</h5>
                         </div>
-                        <div className="card-body"><img src={heroe.image} alt="" width="150" height="150" /></div>
-                        <div className="card-footer text-center">{heroe.gender}</div>
+                        <div className="card-body"><img src={hero.image} alt="heroe" width="200" height="250" /></div>
+                        <div className="card-footer">{hero.gender}</div>
                     </div>
                 ))
             }

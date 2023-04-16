@@ -17,6 +17,18 @@ body {
     font-family: 'Work Sans', sans-serif;
 }
 
+#root {
+    width: 100%;
+}
+
+@media screen and (max-width: 60rem) {
+
+    /* 950px */
+    :root {
+        font-size: 14px;
+    }
+}
+
 .card {
     box-shadow: 1px 1px 5px gray;
     margin: 5px;
@@ -31,13 +43,13 @@ body {
     padding: 0;
 }
 
+.abilities {
+    list-style: none;
+}
+
 .card item {
     display: flex;
     padding: 1rem;
-}
-
-.abilities {
-    list-style: none;
 }
 
 .a,
@@ -47,3 +59,9 @@ body {
     text-decoration: none;
     color: black;
 }
+
+.heroes {
+    background-color: #fbc033;
+}
+
+

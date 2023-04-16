@@ -7,13 +7,16 @@ export const Cards = ({results}) => {
         <div className="container">
             <ul className="cards">
                 {
+                    results != [] ? 
                     results.map(h => (
                         <li className="card-item" key={h.name}>
-                            <Link className='a' to={`/Heroe/${h.id}`}>
+                            <Link className='a' to={`/hero/${h.id}`}>
                                 <CardHeroe url={h.id} />
                             </Link>
                         </li>
-                    ))     
+                    ))  
+                    :
+                    <h1>Loading</h1>   
                 }
             </ul>
         </div>

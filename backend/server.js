@@ -26,7 +26,7 @@ app.get("/", (req, res) => {
     );
 })
 
-app.get("/heroe/:id", (req, res) => {
+app.get("/hero/:id", (req, res) => {
     const { id } = req.params;
     console.log("id: " + id)
     connection.query(

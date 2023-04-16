@@ -6,7 +6,7 @@ import axios from 'axios'
 
 const App = () => {
 
-  const [heroes, setHeroes] = useState([])
+  const [heroe, setHeroes] = useState([])
   useEffect(() => {
     axios.get('http://localhost:3004/')
       .then(res => setHeroes(res.data))
@@ -16,7 +16,7 @@ const App = () => {
   return (
     <>
       <div>
-        <Cards results={heroes} />
+        <Cards results={heroe} />
       </div>
     </>
   )
