@@ -17,6 +17,15 @@ CREATE TABLE heroes(
     image varchar(250)
 );
 
+-- Schedule Table
+CREATE TABLE schedule(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    heroe_id INT,
+    FOREIGN KEY (heroe_id) REFERENCES heroes(id),
+    schedule varchar(200),
+    scheduletime varchar(200)
+);
+
 -- Villains Table
 CREATE TABLE villains(
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -43,3 +52,6 @@ INSERT INTO heroes (name, nickname, age, powers, abilities, gender, specie, alli
 -- Villains
 INSERT INTO villains (name, nickname, gender, powers, abilities, specie, allies, enemies, image) VALUES ('Unknown', 'Mauler Twins, Maulers', 'Male', 'Super Strength, Super Durability, Healing Factor', 'Genius Level Intellect, Cloning Expertise, Memory Duplication, Surgery', 'Unknown', 'N/A', 'Guardians of the Globe, Omni-man, Robot', 'https://cdn.glitch.global/a65e23b0-2def-47ca-b838-c29d3d561b80/maulers.png?v=1681435786697');
 INSERT INTO villains (name, nickname, gender, powers, abilities, specie, allies, enemies, image) VALUES ('Nolan', 'Omni-Man (alter ego)', 'Male', 'Viltrumite Physiology, Superhuman Strength, Superhuman Speed, Sonic Boom Generation, Superhuman Stamina, Enhanced Lung Capacity, Nigh-Invulnerability, Flight, Enhanced Healing Factor, Longevity', 'Master Combatant, Master Manipulator', 'Viltrumite', 'Art Rosenbaum (formerly), Cecil Stedman (formerly), Guardians of the Globe (formerly)', 'Guardians of the Globe, Mauler Twins, Flaxans, Cecil Stedman, Donald Ferguson, Global Defense Agency, Damien Darkblood, ReAnimen, Hail Mary, Invincible', 'https://cdn.glitch.global/a65e23b0-2def-47ca-b838-c29d3d561b80/omniman.png?v=1681441028810');
+
+--Schedule
+INSERT INTO schedule (heroe_id, scheduletime, schedule) VALUES (1, '1,7 5,7 3,7', 'Familiar reunion, Heroes reunion, test reunion');

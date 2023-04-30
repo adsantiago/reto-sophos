@@ -15,22 +15,32 @@ const connection = mysql.createConnection({
 
 app.use(express.urlencoded({ extended: false }));
 
+//All heroes
 app.get("/", (req, res) => {
     connection.query(
         'SELECT * FROM heroes',
         function (err, results, fields) {
-            console.log("Results " + results); 
-            console.log("Fields " + fields); 
             res.json(results)
         }
     );
 })
 
+//Single hero
 app.get("/hero/:id", (req, res) => {
     const { id } = req.params;
-    console.log("id: " + id)
     connection.query(
         'SELECT * FROM heroes WHERE id = ?', [id],
+        function (err, results, fields) {
+            res.json(results)
+        }
+    );
+})
+
+//Single schedule
+app.get("/schedule/:id", (req, res) => {
+    const { id } = req.params;
+    connection.query(
+        'SELECT * FROM schedule WHERE id = ?', [id],
         function (err, results, fields) {
             console.log("Results " + results);
             console.log("Fields " + fields);
