@@ -5,6 +5,8 @@ import './index.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Hero from './Elements/Hero';
 import Container from './Elements/Container';
+import Villains from './Elements/Villains';
+import Villain from './Elements/Villain';
 
 const Index = () => {
   return (
@@ -17,6 +19,12 @@ const Index = () => {
             } />
             <Route path="/hero/:id" element={
               <Hero />
+            } />
+            <Route path="/villains/" element={
+              <Villains />
+            } />
+            <Route path="/villain/:id" element={
+              <Villain />
             } />
           </Routes>
         </Container>

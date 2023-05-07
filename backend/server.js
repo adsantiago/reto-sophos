@@ -40,10 +40,31 @@ app.get("/hero/:id", (req, res) => {
 app.get("/schedule/:id", (req, res) => {
     const { id } = req.params;
     connection.query(
-        'SELECT * FROM schedule WHERE id = ?', [id],
+        'SELECT * FROM schedule WHERE heroe_id = ?', [id],
         function (err, results, fields) {
             console.log("Results " + results);
             console.log("Fields " + fields);
+            res.json(results)
+        }
+    );
+})
+
+//All villains
+app.get("/villains", (req, res) => {
+    connection.query(
+        'SELECT * FROM villains',
+        function (err, results, fields) {
+            res.json(results)
+        }
+    );
+})
+
+//Sinlge villain
+app.get("/villain/:id", (req, res) => {
+    const { id } = req.params;
+    connection.query(
+        'SELECT * FROM villains WHERE id = ?', [id],
+        function (err, results, fields) {
             res.json(results)
         }
     );

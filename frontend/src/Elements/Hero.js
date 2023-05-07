@@ -31,9 +31,7 @@ export const Hero = () => {
     let heroschedule
     if(schedule.schedule !== undefined){
         heroschedule = schedule.schedule
-        console.log(heroschedule)
         heroschedule = heroschedule.split(',')
-        console.log(heroschedule)
     }
     
     let heroabilities
@@ -55,7 +53,7 @@ export const Hero = () => {
     if (hero.enemies !== undefined) {
         heroenemies = hero.enemies.split(',')
     }
-
+    
     return (
         <>
             <div>
@@ -203,7 +201,7 @@ export const Hero = () => {
                                             <td>
                                                 {
                                                     heroscheduletime?.map((day, index) =>
-                                                        day[0] == 1 && day[2] == 7 ?
+                                                        day[0] == 1 && (day[2]+day[3]) === "07" ?
                                                             <React.Fragment key={index}>
                                                                 {heroschedule[index]}
                                                             </React.Fragment>
@@ -215,7 +213,7 @@ export const Hero = () => {
                                             <td>
                                                 {
                                                     heroscheduletime?.map((day, index) =>
-                                                        day[0] == 2 && day[2] == 7 ?
+                                                        day[0] == 2 && (day[2] + day[3]) === "07" ?
                                                             <React.Fragment key={index}>
                                                                 {heroschedule[index]}
                                                             </React.Fragment>
@@ -227,7 +225,7 @@ export const Hero = () => {
                                             <td>
                                                 {
                                                     heroscheduletime?.map((day, index) =>
-                                                        day[0] == 3 && day[2] == 7 ?
+                                                        day[0] == 3 && (day[2] + day[3]) === "07" ?
                                                             <React.Fragment key={index}>
                                                                 {heroschedule[index]}
                                                             </React.Fragment>
@@ -239,7 +237,7 @@ export const Hero = () => {
                                             <td>
                                                 {
                                                     heroscheduletime?.map((day, index) =>
-                                                        day[0] == 4 && day[2] == 7 ?
+                                                        day[0] == 4 && (day[2] + day[3]) === "07" ?
                                                             <React.Fragment key={index}>
                                                                 {heroschedule[index]}
                                                             </React.Fragment>
@@ -251,7 +249,7 @@ export const Hero = () => {
                                             <td>
                                                 {
                                                     heroscheduletime?.map((day, index) =>
-                                                        day[0] == 5 && day[2] == 7 ?
+                                                        day[0] == 5 && (day[2] + day[3]) === "07" ?
                                                             <React.Fragment key={index}>
                                                                 {heroschedule[index]}
                                                             </React.Fragment>
@@ -263,7 +261,7 @@ export const Hero = () => {
                                             <td>
                                                 {
                                                     heroscheduletime?.map((day, index) =>
-                                                        day[0] == 6 && day[2] == 7 ?
+                                                        day[0] == 6 && (day[2] + day[3]) === "07" ?
                                                             <React.Fragment key={index}>
                                                                 {heroschedule[index]}
                                                             </React.Fragment>
@@ -278,7 +276,7 @@ export const Hero = () => {
                                             <td>
                                                 {
                                                     heroscheduletime?.map((day, index) =>
-                                                        day[0] == 1 && day[2] == 8 ?
+                                                        day[0] == 1 && (day[2] + day[3]) === "08" ?
                                                             <React.Fragment key={index}>
                                                                 {heroschedule[index]}
                                                             </React.Fragment>
@@ -290,7 +288,7 @@ export const Hero = () => {
                                             <td>
                                                 {
                                                     heroscheduletime?.map((day, index) =>
-                                                        day[0] == 2 && day[2] == 8 ?
+                                                        day[0] == 2 && (day[2] + day[3]) === "08" ?
                                                             <React.Fragment key={index}>
                                                                 {heroschedule[index]}
                                                             </React.Fragment>
@@ -302,7 +300,7 @@ export const Hero = () => {
                                             <td>
                                                 {
                                                     heroscheduletime?.map((day, index) =>
-                                                        day[0] == 3 && day[2] == 8 ?
+                                                        day[0] == 3 && (day[2] + day[3]) === "08" ?
                                                             <React.Fragment key={index}>
                                                                 {heroschedule[index]}
                                                             </React.Fragment>
@@ -314,7 +312,7 @@ export const Hero = () => {
                                             <td>
                                                 {
                                                     heroscheduletime?.map((day, index) =>
-                                                        day[0] == 4 && day[2] == 8 ?
+                                                        day[0] == 4 && (day[2] + day[3]) === "08" ?
                                                             <React.Fragment key={index}>
                                                                 {heroschedule[index]}
                                                             </React.Fragment>
@@ -326,7 +324,7 @@ export const Hero = () => {
                                             <td>
                                                 {
                                                     heroscheduletime?.map((day, index) =>
-                                                        day[0] == 5 && day[2] == 8 ?
+                                                        day[0] == 5 && (day[2] + day[3]) === "08" ?
                                                             <React.Fragment key={index}>
                                                                 {heroschedule[index]}
                                                             </React.Fragment>
@@ -338,7 +336,7 @@ export const Hero = () => {
                                             <td>
                                                 {
                                                     heroscheduletime?.map((day, index) =>
-                                                        day[0] == 6 && day[2] == 8 ?
+                                                        day[0] == 6 && (day[2] + day[3]) === "08" ?
                                                             <React.Fragment key={index}>
                                                                 {heroschedule[index]}
                                                             </React.Fragment>
@@ -353,7 +351,7 @@ export const Hero = () => {
                                             <td>
                                                 {
                                                     heroscheduletime?.map((day, index) =>
-                                                        day[0] == 1 && day[2] == 9 ?
+                                                        day[0] == 1 && (day[2] + day[3]) === "09" ?
                                                             <React.Fragment key={index}>
                                                                 {heroschedule[index]}
                                                             </React.Fragment>
@@ -365,7 +363,7 @@ export const Hero = () => {
                                             <td>
                                                 {
                                                     heroscheduletime?.map((day, index) =>
-                                                        day[0] == 2 && day[2] == 9 ?
+                                                        day[0] == 2 && (day[2] + day[3]) === "09" ?
                                                             <React.Fragment key={index}>
                                                                 {heroschedule[index]}
                                                             </React.Fragment>
@@ -377,7 +375,7 @@ export const Hero = () => {
                                             <td>
                                                 {
                                                     heroscheduletime?.map((day, index) =>
-                                                        day[0] == 3 && day[2] == 9 ?
+                                                        day[0] == 3 && (day[2] + day[3]) === "09" ?
                                                             <React.Fragment key={index}>
                                                                 {heroschedule[index]}
                                                             </React.Fragment>
@@ -389,7 +387,7 @@ export const Hero = () => {
                                             <td>
                                                 {
                                                     heroscheduletime?.map((day, index) =>
-                                                        day[0] == 4 && day[2] == 9 ?
+                                                        day[0] == 4 && (day[2] + day[3]) === "09" ?
                                                             <React.Fragment key={index}>
                                                                 {heroschedule[index]}
                                                             </React.Fragment>
@@ -401,7 +399,7 @@ export const Hero = () => {
                                             <td>
                                                 {
                                                     heroscheduletime?.map((day, index) =>
-                                                        day[0] == 5 && day[2] == 9 ?
+                                                        day[0] == 5 && (day[2] + day[3]) === "09" ?
                                                             <React.Fragment key={index}>
                                                                 {heroschedule[index]}
                                                             </React.Fragment>
@@ -413,7 +411,7 @@ export const Hero = () => {
                                             <td>
                                                 {
                                                     heroscheduletime?.map((day, index) =>
-                                                        day[0] == 6 && day[2] == 9 ?
+                                                        day[0] == 6 && (day[2] + day[3]) === "09" ?
                                                             <React.Fragment key={index}>
                                                                 {heroschedule[index]}
                                                             </React.Fragment>
@@ -428,7 +426,7 @@ export const Hero = () => {
                                             <td>
                                                 {
                                                     heroscheduletime?.map((day, index) =>
-                                                        day[0] == 1 && day[2] == 10 ?
+                                                        day[0] == 1 && (day[2] + day[3]) === "10" ?
                                                             <React.Fragment key={index}>
                                                                 {heroschedule[index]}
                                                             </React.Fragment>
@@ -440,7 +438,7 @@ export const Hero = () => {
                                             <td>
                                                 {
                                                     heroscheduletime?.map((day, index) =>
-                                                        day[0] == 2 && day[2] == 10 ?
+                                                        day[0] == 2 && (day[2] + day[3]) === "10" ?
                                                             <React.Fragment key={index}>
                                                                 {heroschedule[index]}
                                                             </React.Fragment>
@@ -452,7 +450,7 @@ export const Hero = () => {
                                             <td>
                                                 {
                                                     heroscheduletime?.map((day, index) =>
-                                                        day[0] == 3 && day[2] == 10 ?
+                                                        day[0] == 3 && (day[2] + day[3]) === "10" ?
                                                             <React.Fragment key={index}>
                                                                 {heroschedule[index]}
                                                             </React.Fragment>
@@ -464,7 +462,7 @@ export const Hero = () => {
                                             <td>
                                                 {
                                                     heroscheduletime?.map((day, index) =>
-                                                        day[0] == 4 && day[2] == 10 ?
+                                                        day[0] == 4 && (day[2] + day[3]) === "10" ?
                                                             <React.Fragment key={index}>
                                                                 {heroschedule[index]}
                                                             </React.Fragment>
@@ -476,7 +474,7 @@ export const Hero = () => {
                                             <td>
                                                 {
                                                     heroscheduletime?.map((day, index) =>
-                                                        day[0] == 5 && day[2] == 10 ?
+                                                        day[0] == 5 && (day[2] + day[3]) === "10" ?
                                                             <React.Fragment key={index}>
                                                                 {heroschedule[index]}
                                                             </React.Fragment>
@@ -488,7 +486,7 @@ export const Hero = () => {
                                             <td>
                                                 {
                                                     heroscheduletime?.map((day, index) =>
-                                                        day[0] == 6 && day[2] == 10 ?
+                                                        day[0] == 6 && (day[2] + day[3]) === "10" ?
                                                             <React.Fragment key={index}>
                                                                 {heroschedule[index]}
                                                             </React.Fragment>
@@ -503,7 +501,7 @@ export const Hero = () => {
                                             <td>
                                                 {
                                                     heroscheduletime?.map((day, index) =>
-                                                        day[0] == 1 && day[2] == 11 ?
+                                                        day[0] == 1 && (day[2] + day[3]) === "11" ?
                                                             <React.Fragment key={index}>
                                                                 {heroschedule[index]}
                                                             </React.Fragment>
@@ -515,7 +513,7 @@ export const Hero = () => {
                                             <td>
                                                 {
                                                     heroscheduletime?.map((day, index) =>
-                                                        day[0] == 2 && day[2] == 11 ?
+                                                        day[0] == 2 && (day[2] + day[3]) === "11" ?
                                                             <React.Fragment key={index}>
                                                                 {heroschedule[index]}
                                                             </React.Fragment>
@@ -527,7 +525,7 @@ export const Hero = () => {
                                             <td>
                                                 {
                                                     heroscheduletime?.map((day, index) =>
-                                                        day[0] == 3 && day[2] == 11 ?
+                                                        day[0] == 3 && (day[2] + day[3]) === "11" ?
                                                             <React.Fragment key={index}>
                                                                 {heroschedule[index]}
                                                             </React.Fragment>
@@ -539,7 +537,7 @@ export const Hero = () => {
                                             <td>
                                                 {
                                                     heroscheduletime?.map((day, index) =>
-                                                        day[0] == 4 && day[2] == 11 ?
+                                                        day[0] == 4 && (day[2] + day[3]) === "11" ?
                                                             <React.Fragment key={index}>
                                                                 {heroschedule[index]}
                                                             </React.Fragment>
@@ -551,7 +549,7 @@ export const Hero = () => {
                                             <td>
                                                 {
                                                     heroscheduletime?.map((day, index) =>
-                                                        day[0] == 5 && day[2] == 11 ?
+                                                        day[0] == 5 && (day[2] + day[3]) === "11" ?
                                                             <React.Fragment key={index}>
                                                                 {heroschedule[index]}
                                                             </React.Fragment>
@@ -563,7 +561,7 @@ export const Hero = () => {
                                             <td>
                                                 {
                                                     heroscheduletime?.map((day, index) =>
-                                                        day[0] == 6 && day[2] == 11 ?
+                                                        day[0] == 6 && (day[2] + day[3]) === "11" ?
                                                             <React.Fragment key={index}>
                                                                 {heroschedule[index]}
                                                             </React.Fragment>
@@ -578,7 +576,7 @@ export const Hero = () => {
                                             <td>
                                                 {
                                                     heroscheduletime?.map((day, index) =>
-                                                        day[0] == 1 && day[2] == 12 ?
+                                                        day[0] == 1 && (day[2] + day[3]) === "12" ?
                                                             <React.Fragment key={index}>
                                                                 {heroschedule[index]}
                                                             </React.Fragment>
@@ -590,7 +588,7 @@ export const Hero = () => {
                                             <td>
                                                 {
                                                     heroscheduletime?.map((day, index) =>
-                                                        day[0] == 2 && day[2] == 12 ?
+                                                        day[0] == 2 && (day[2] + day[3]) === "12" ?
                                                             <React.Fragment key={index}>
                                                                 {heroschedule[index]}
                                                             </React.Fragment>
@@ -602,7 +600,7 @@ export const Hero = () => {
                                             <td>
                                                 {
                                                     heroscheduletime?.map((day, index) =>
-                                                        day[0] == 3 && day[2] == 12 ?
+                                                        day[0] == 3 && (day[2] + day[3]) === "12" ?
                                                             <React.Fragment key={index}>
                                                                 {heroschedule[index]}
                                                             </React.Fragment>
@@ -614,7 +612,7 @@ export const Hero = () => {
                                             <td>
                                                 {
                                                     heroscheduletime?.map((day, index) =>
-                                                        day[0] == 4 && day[2] == 12 ?
+                                                        day[0] == 4 && (day[2] + day[3]) === "12" ?
                                                             <React.Fragment key={index}>
                                                                 {heroschedule[index]}
                                                             </React.Fragment>
@@ -626,7 +624,7 @@ export const Hero = () => {
                                             <td>
                                                 {
                                                     heroscheduletime?.map((day, index) =>
-                                                        day[0] == 5 && day[2] == 12 ?
+                                                        day[0] == 5 && (day[2] + day[3]) === "12" ?
                                                             <React.Fragment key={index}>
                                                                 {heroschedule[index]}
                                                             </React.Fragment>
@@ -638,7 +636,82 @@ export const Hero = () => {
                                             <td>
                                                 {
                                                     heroscheduletime?.map((day, index) =>
-                                                        day[0] == 6 && day[2] == 12 ?
+                                                        day[0] == 6 && (day[2] + day[3]) === "12" ?
+                                                            <React.Fragment key={index}>
+                                                                {heroschedule[index]}
+                                                            </React.Fragment>
+                                                            :
+                                                            <React.Fragment key={index} />
+                                                    )
+                                                }
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">1:00pm</th>
+                                            <td>
+                                                {
+                                                    heroscheduletime?.map((day, index) =>
+                                                        day[0] == 1 && (day[2] + day[3]) === "13" ?
+                                                            <React.Fragment key={index}>
+                                                                {heroschedule[index]}
+                                                            </React.Fragment>
+                                                            :
+                                                            <React.Fragment key={index} />
+                                                    )
+                                                }
+                                            </td>
+                                            <td>
+                                                {
+                                                    heroscheduletime?.map((day, index) =>
+                                                        day[0] == 2 && (day[2] + day[3]) === "13" ?
+                                                            <React.Fragment key={index}>
+                                                                {heroschedule[index]}
+                                                            </React.Fragment>
+                                                            :
+                                                            <React.Fragment key={index} />
+                                                    )
+                                                }
+                                            </td>
+                                            <td>
+                                                {
+                                                    heroscheduletime?.map((day, index) =>
+                                                        day[0] == 3 && (day[2] + day[3]) === "13" ?
+                                                            <React.Fragment key={index}>
+                                                                {heroschedule[index]}
+                                                            </React.Fragment>
+                                                            :
+                                                            <React.Fragment key={index} />
+                                                    )
+                                                }
+                                            </td>
+                                            <td>
+                                                {
+                                                    heroscheduletime?.map((day, index) =>
+                                                        day[0] == 4 && (day[2] + day[3]) === "13" ?
+                                                            <React.Fragment key={index}>
+                                                                {heroschedule[index]}
+                                                            </React.Fragment>
+                                                            :
+                                                            <React.Fragment key={index} />
+                                                    )
+                                                }
+                                            </td>
+                                            <td>
+                                                {
+                                                    heroscheduletime?.map((day, index) =>
+                                                        day[0] == 5 && (day[2] + day[3]) === "13" ?
+                                                            <React.Fragment key={index}>
+                                                                {heroschedule[index]}
+                                                            </React.Fragment>
+                                                            :
+                                                            <React.Fragment key={index} />
+                                                    )
+                                                }
+                                            </td>
+                                            <td>
+                                                {
+                                                    heroscheduletime?.map((day, index) =>
+                                                        day[0] == 6 && (day[2] + day[3]) === "13" ?
                                                             <React.Fragment key={index}>
                                                                 {heroschedule[index]}
                                                             </React.Fragment>
@@ -653,7 +726,7 @@ export const Hero = () => {
                                             <td>
                                                 {
                                                     heroscheduletime?.map((day, index) =>
-                                                        day[0] == 1 && day[2] == 14 ?
+                                                        day[0] == 1 && (day[2] + day[3]) === "14" ?
                                                             <React.Fragment key={index}>
                                                                 {heroschedule[index]}
                                                             </React.Fragment>
@@ -665,7 +738,7 @@ export const Hero = () => {
                                             <td>
                                                 {
                                                     heroscheduletime?.map((day, index) =>
-                                                        day[0] == 2 && day[2] == 14 ?
+                                                        day[0] == 2 && (day[2] + day[3]) === "14" ?
                                                             <React.Fragment key={index}>
                                                                 {heroschedule[index]}
                                                             </React.Fragment>
@@ -677,7 +750,7 @@ export const Hero = () => {
                                             <td>
                                                 {
                                                     heroscheduletime?.map((day, index) =>
-                                                        day[0] == 3 && day[2] == 14 ?
+                                                        day[0] == 3 && (day[2] + day[3]) === "14" ?
                                                             <React.Fragment key={index}>
                                                                 {heroschedule[index]}
                                                             </React.Fragment>
@@ -689,7 +762,7 @@ export const Hero = () => {
                                             <td>
                                                 {
                                                     heroscheduletime?.map((day, index) =>
-                                                        day[0] == 4 && day[2] == 14 ?
+                                                        day[0] == 4 && (day[2] + day[3]) === "14" ?
                                                             <React.Fragment key={index}>
                                                                 {heroschedule[index]}
                                                             </React.Fragment>
@@ -701,7 +774,7 @@ export const Hero = () => {
                                             <td>
                                                 {
                                                     heroscheduletime?.map((day, index) =>
-                                                        day[0] == 5 && day[2] == 14 ?
+                                                        day[0] == 5 && (day[2] + day[3]) === "14" ?
                                                             <React.Fragment key={index}>
                                                                 {heroschedule[index]}
                                                             </React.Fragment>
@@ -713,82 +786,7 @@ export const Hero = () => {
                                             <td>
                                                 {
                                                     heroscheduletime?.map((day, index) =>
-                                                        day[0] == 6 && day[2] == 14 ?
-                                                            <React.Fragment key={index}>
-                                                                {heroschedule[index]}
-                                                            </React.Fragment>
-                                                            :
-                                                            <React.Fragment key={index} />
-                                                    )
-                                                }
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">2:00pm</th>
-                                            <td>
-                                                {
-                                                    heroscheduletime?.map((day, index) =>
-                                                        day[0] == 1 && day[2] == 14 ?
-                                                            <React.Fragment key={index}>
-                                                                {heroschedule[index]}
-                                                            </React.Fragment>
-                                                            :
-                                                            <React.Fragment key={index} />
-                                                    )
-                                                }
-                                            </td>
-                                            <td>
-                                                {
-                                                    heroscheduletime?.map((day, index) =>
-                                                        day[0] == 2 && day[2] == 14 ?
-                                                            <React.Fragment key={index}>
-                                                                {heroschedule[index]}
-                                                            </React.Fragment>
-                                                            :
-                                                            <React.Fragment key={index} />
-                                                    )
-                                                }
-                                            </td>
-                                            <td>
-                                                {
-                                                    heroscheduletime?.map((day, index) =>
-                                                        day[0] == 3 && day[2] == 14 ?
-                                                            <React.Fragment key={index}>
-                                                                {heroschedule[index]}
-                                                            </React.Fragment>
-                                                            :
-                                                            <React.Fragment key={index} />
-                                                    )
-                                                }
-                                            </td>
-                                            <td>
-                                                {
-                                                    heroscheduletime?.map((day, index) =>
-                                                        day[0] == 4 && day[2] == 14 ?
-                                                            <React.Fragment key={index}>
-                                                                {heroschedule[index]}
-                                                            </React.Fragment>
-                                                            :
-                                                            <React.Fragment key={index} />
-                                                    )
-                                                }
-                                            </td>
-                                            <td>
-                                                {
-                                                    heroscheduletime?.map((day, index) =>
-                                                        day[0] == 5 && day[2] == 14 ?
-                                                            <React.Fragment key={index}>
-                                                                {heroschedule[index]}
-                                                            </React.Fragment>
-                                                            :
-                                                            <React.Fragment key={index} />
-                                                    )
-                                                }
-                                            </td>
-                                            <td>
-                                                {
-                                                    heroscheduletime?.map((day, index) =>
-                                                        day[0] == 6 && day[2] == 14 ?
+                                                        day[0] == 6 && (day[2] + day[3]) === "14" ?
                                                             <React.Fragment key={index}>
                                                                 {heroschedule[index]}
                                                             </React.Fragment>
@@ -803,7 +801,7 @@ export const Hero = () => {
                                             <td>
                                                 {
                                                     heroscheduletime?.map((day, index) =>
-                                                        day[0] == 1 && day[2] == 15 ?
+                                                        day[0] == 1 && (day[2] + day[3]) === "15" ?
                                                             <React.Fragment key={index}>
                                                                 {heroschedule[index]}
                                                             </React.Fragment>
@@ -815,7 +813,7 @@ export const Hero = () => {
                                             <td>
                                                 {
                                                     heroscheduletime?.map((day, index) =>
-                                                        day[0] == 2 && day[2] == 15 ?
+                                                        day[0] == 2 && (day[2] + day[3]) === "15" ?
                                                             <React.Fragment key={index}>
                                                                 {heroschedule[index]}
                                                             </React.Fragment>
@@ -827,7 +825,7 @@ export const Hero = () => {
                                             <td>
                                                 {
                                                     heroscheduletime?.map((day, index) =>
-                                                        day[0] == 3 && day[2] == 15 ?
+                                                        day[0] == 3 && (day[2] + day[3]) === "15" ?
                                                             <React.Fragment key={index}>
                                                                 {heroschedule[index]}
                                                             </React.Fragment>
@@ -839,7 +837,7 @@ export const Hero = () => {
                                             <td>
                                                 {
                                                     heroscheduletime?.map((day, index) =>
-                                                        day[0] == 4 && day[2] == 15 ?
+                                                        day[0] == 4 && (day[2] + day[3]) === "15" ?
                                                             <React.Fragment key={index}>
                                                                 {heroschedule[index]}
                                                             </React.Fragment>
@@ -851,7 +849,7 @@ export const Hero = () => {
                                             <td>
                                                 {
                                                     heroscheduletime?.map((day, index) =>
-                                                        day[0] == 5 && day[2] == 15 ?
+                                                        day[0] == 5 && (day[2] + day[3]) === "15" ?
                                                             <React.Fragment key={index}>
                                                                 {heroschedule[index]}
                                                             </React.Fragment>
@@ -863,7 +861,7 @@ export const Hero = () => {
                                             <td>
                                                 {
                                                     heroscheduletime?.map((day, index) =>
-                                                        day[0] == 6 && day[2] == 15 ?
+                                                        day[0] == 6 && (day[2] + day[3]) === "15" ?
                                                             <React.Fragment key={index}>
                                                                 {heroschedule[index]}
                                                             </React.Fragment>
@@ -878,7 +876,7 @@ export const Hero = () => {
                                             <td>
                                                 {
                                                     heroscheduletime?.map((day, index) =>
-                                                        day[0] == 1 && day[2] == 16 ?
+                                                        day[0] == 1 && (day[2] + day[3]) === "16" ?
                                                             <React.Fragment key={index}>
                                                                 {heroschedule[index]}
                                                             </React.Fragment>
@@ -890,7 +888,7 @@ export const Hero = () => {
                                             <td>
                                                 {
                                                     heroscheduletime?.map((day, index) =>
-                                                        day[0] == 2 && day[2] == 16 ?
+                                                        day[0] == 2 && (day[2] + day[3]) === "16" ?
                                                             <React.Fragment key={index}>
                                                                 {heroschedule[index]}
                                                             </React.Fragment>
@@ -902,7 +900,7 @@ export const Hero = () => {
                                             <td>
                                                 {
                                                     heroscheduletime?.map((day, index) =>
-                                                        day[0] == 3 && day[2] == 16 ?
+                                                        day[0] == 3 && (day[2] + day[3]) === "16" ?
                                                             <React.Fragment key={index}>
                                                                 {heroschedule[index]}
                                                             </React.Fragment>
@@ -914,7 +912,7 @@ export const Hero = () => {
                                             <td>
                                                 {
                                                     heroscheduletime?.map((day, index) =>
-                                                        day[0] == 4 && day[2] == 16 ?
+                                                        day[0] == 4 && (day[2] + day[3]) === "16" ?
                                                             <React.Fragment key={index}>
                                                                 {heroschedule[index]}
                                                             </React.Fragment>
@@ -926,7 +924,7 @@ export const Hero = () => {
                                             <td>
                                                 {
                                                     heroscheduletime?.map((day, index) =>
-                                                        day[0] == 5 && day[2] == 16 ?
+                                                        day[0] == 5 && (day[2] + day[3]) === "16" ?
                                                             <React.Fragment key={index}>
                                                                 {heroschedule[index]}
                                                             </React.Fragment>
@@ -938,7 +936,7 @@ export const Hero = () => {
                                             <td>
                                                 {
                                                     heroscheduletime?.map((day, index) =>
-                                                        day[0] == 6 && day[2] == 16 ?
+                                                        day[0] == 6 && (day[2] + day[3]) === "16" ?
                                                             <React.Fragment key={index}>
                                                                 {heroschedule[index]}
                                                             </React.Fragment>
@@ -953,7 +951,7 @@ export const Hero = () => {
                                             <td>
                                                 {
                                                     heroscheduletime?.map((day, index) =>
-                                                        day[0] == 1 && day[2] == 17 ?
+                                                        day[0] == 1 && (day[2] + day[3]) === "17" ?
                                                             <React.Fragment key={index}>
                                                                 {heroschedule[index]}
                                                             </React.Fragment>
@@ -965,7 +963,7 @@ export const Hero = () => {
                                             <td>
                                                 {
                                                     heroscheduletime?.map((day, index) =>
-                                                        day[0] == 2 && day[2] == 17 ?
+                                                        day[0] == 2 && (day[2] + day[3]) === "17" ?
                                                             <React.Fragment key={index}>
                                                                 {heroschedule[index]}
                                                             </React.Fragment>
@@ -977,7 +975,7 @@ export const Hero = () => {
                                             <td>
                                                 {
                                                     heroscheduletime?.map((day, index) =>
-                                                        day[0] == 3 && day[2] == 17 ?
+                                                        day[0] == 3 && (day[2] + day[3]) === "17" ?
                                                             <React.Fragment key={index}>
                                                                 {heroschedule[index]}
                                                             </React.Fragment>
@@ -989,7 +987,7 @@ export const Hero = () => {
                                             <td>
                                                 {
                                                     heroscheduletime?.map((day, index) =>
-                                                        day[0] == 4 && day[2] == 17 ?
+                                                        day[0] == 4 && (day[2] + day[3]) === "17" ?
                                                             <React.Fragment key={index}>
                                                                 {heroschedule[index]}
                                                             </React.Fragment>
@@ -1001,7 +999,7 @@ export const Hero = () => {
                                             <td>
                                                 {
                                                     heroscheduletime?.map((day, index) =>
-                                                        day[0] == 5 && day[2] == 17 ?
+                                                        day[0] == 5 && (day[2] + day[3]) === "17" ?
                                                             <React.Fragment key={index}>
                                                                 {heroschedule[index]}
                                                             </React.Fragment>
@@ -1013,7 +1011,7 @@ export const Hero = () => {
                                             <td>
                                                 {
                                                     heroscheduletime?.map((day, index) =>
-                                                        day[0] == 6 && day[2] == 17 ?
+                                                        day[0] == 6 && (day[2] + day[3]) === "17" ?
                                                             <React.Fragment key={index}>
                                                                 {heroschedule[index]}
                                                             </React.Fragment>
@@ -1028,7 +1026,7 @@ export const Hero = () => {
                                             <td>
                                                 {
                                                     heroscheduletime?.map((day, index) =>
-                                                        day[0] == 1 && day[2] == 18 ?
+                                                        day[0] == 1 && (day[2] + day[3]) === "18" ?
                                                             <React.Fragment key={index}>
                                                                 {heroschedule[index]}
                                                             </React.Fragment>
@@ -1040,7 +1038,7 @@ export const Hero = () => {
                                             <td>
                                                 {
                                                     heroscheduletime?.map((day, index) =>
-                                                        day[0] == 2 && day[2] == 18 ?
+                                                        day[0] == 2 && (day[2] + day[3]) === "18" ?
                                                             <React.Fragment key={index}>
                                                                 {heroschedule[index]}
                                                             </React.Fragment>
@@ -1052,7 +1050,7 @@ export const Hero = () => {
                                             <td>
                                                 {
                                                     heroscheduletime?.map((day, index) =>
-                                                        day[0] == 3 && day[2] == 18 ?
+                                                        day[0] == 3 && (day[2] + day[3]) === "18" ?
                                                             <React.Fragment key={index}>
                                                                 {heroschedule[index]}
                                                             </React.Fragment>
@@ -1064,7 +1062,7 @@ export const Hero = () => {
                                             <td>
                                                 {
                                                     heroscheduletime?.map((day, index) =>
-                                                        day[0] == 4 && day[2] == 18 ?
+                                                        day[0] == 4 && (day[2] + day[3]) === "18" ?
                                                             <React.Fragment key={index}>
                                                                 {heroschedule[index]}
                                                             </React.Fragment>
@@ -1076,7 +1074,7 @@ export const Hero = () => {
                                             <td>
                                                 {
                                                     heroscheduletime?.map((day, index) =>
-                                                        day[0] == 5 && day[2] == 18 ?
+                                                        day[0] == 5 && (day[2] + day[3]) === "18" ?
                                                             <React.Fragment key={index}>
                                                                 {heroschedule[index]}
                                                             </React.Fragment>
@@ -1088,7 +1086,7 @@ export const Hero = () => {
                                             <td>
                                                 {
                                                     heroscheduletime?.map((day, index) =>
-                                                        day[0] == 6 && day[2] == 18 ?
+                                                        day[0] == 6 && (day[2] + day[3]) === "18" ?
                                                             <React.Fragment key={index}>
                                                                 {heroschedule[index]}
                                                             </React.Fragment>
