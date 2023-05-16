@@ -3,6 +3,7 @@ import axios from 'axios'
 import { useParams } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Header, Title, ContainerHeader } from './Header';
+import BackBtn from './BackBtn';
 
 export const Hero = () => {
 
@@ -56,9 +57,15 @@ export const Hero = () => {
     
     return (
         <>
+            <Header>
+                <ContainerHeader>
+                    <Title>Heroe</Title>
+                    <BackBtn></BackBtn>
+                </ContainerHeader>
+            </Header>
             <div>
                 <div className="card text-center">
-                    <div className="card-header sticky-top">
+                    <div className="card-header">
                         <h5 className='card-header text-capitalize heroes'>
                             <strong>
                                 {hero.name}

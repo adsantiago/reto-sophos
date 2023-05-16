@@ -17,7 +17,7 @@ export const CardVillain = ({ url }) => {
                 villain.map(villain => (
                     <div className="card text-center" key={villain.id}>
                         <div className='card-header'>
-                            <h5 className="card-title">{villain.name}</h5>
+                            <h5 className="card-title">{villain.nickname}</h5>
                         </div>
                         <div className="card-body"><img src={villain.image} alt="heroe" width="200" height="250" /></div>
                         <div className="card-footer">{villain.gender}</div>

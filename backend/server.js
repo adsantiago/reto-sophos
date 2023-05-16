@@ -59,11 +59,21 @@ app.get("/villains", (req, res) => {
     );
 })
 
-//Sinlge villain
+//Single villain
 app.get("/villain/:id", (req, res) => {
     const { id } = req.params;
     connection.query(
         'SELECT * FROM villains WHERE id = ?', [id],
+        function (err, results, fields) {
+            res.json(results)
+        }
+    );
+})
+
+//All sponsor
+app.get("/sponsor", (req, res) => {
+    connection.query(
+        'SELECT * FROM sponsor',
         function (err, results, fields) {
             res.json(results)
         }
