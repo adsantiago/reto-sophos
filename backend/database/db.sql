@@ -79,8 +79,8 @@ INSERT INTO schedule (heroe_id, scheduletime, schedule) VALUES (6, '1,10 4,15 2,
 INSERT INTO schedule (heroe_id, scheduletime, schedule) VALUES (7, '2,09 3,16 5,12', 'Morining class, Meeting with sponsors, Heroes reunion');
 
 --Sponsor
-INSERT INTO sponsor (name, quantity, source, heroe_id, image) VALUES('Patrocinador A', 100000, 'Fuente A', 1, "https://cdn.glitch.global/a65e23b0-2def-47ca-b838-c29d3d561b80/logoA.png?v=1684295199996");
-INSERT INTO sponsor (name, quantity, source, heroe_id, image) VALUES('Patrocinador B', 500000, 'Fuente B', 1, "https://cdn.glitch.global/a65e23b0-2def-47ca-b838-c29d3d561b80/logoB.png?v=1684295205742");
+INSERT INTO sponsor (name, quantity, source, heroe_id, image) VALUES('Patrocinador A', 100000, 'Fuente A', 1, "https://raw.githubusercontent.com/adsantiago/reto-sophos/master/backend/images/logoA.png");
+INSERT INTO sponsor (name, quantity, source, heroe_id, image) VALUES('Patrocinador B', 500000, 'Fuente B', 1, "https://raw.githubusercontent.com/adsantiago/reto-sophos/master/backend/images/logoB.png");
 
 
 
