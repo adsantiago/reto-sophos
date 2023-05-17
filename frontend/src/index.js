@@ -7,7 +7,6 @@ import Hero from './Elements/Hero';
 import Container from './Elements/Container';
 import Villains from './Elements/Villains';
 import Villain from './Elements/Villain';
-import Sponsor from './Elements/Sponsor';
 
 const Index = () => {
   return (
@@ -26,9 +25,6 @@ const Index = () => {
             } />
             <Route path="/villain/:id" element={
               <Villain />
-            } />
-            <Route path="/sponsor" element={
-              <Sponsor />
             } />
           </Routes>
         </Container>

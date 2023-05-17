@@ -71,9 +71,10 @@ app.get("/villain/:id", (req, res) => {
 })
 
 //All sponsor
-app.get("/sponsor", (req, res) => {
+app.get("/sponsor/:id", (req, res) => {
+    const { id } = req.params;
     connection.query(
-        'SELECT * FROM sponsor',
+        'SELECT * FROM sponsor WHERE heroe_id = ?', [id],
         function (err, results, fields) {
             res.json(results)
         }

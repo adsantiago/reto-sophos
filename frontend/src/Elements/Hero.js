@@ -10,6 +10,7 @@ export const Hero = () => {
     const { id } = useParams()
     const [hero, setHero] = useState([])
     const [schedule, setSchedule] = useState([])
+    const [sponsor, setSponsor] = useState([])
 
     useEffect(() => {
         axios.get(`http://localhost:3004/hero/${id}`)
@@ -22,6 +23,21 @@ export const Hero = () => {
             .then(res => setSchedule(Object.values(res.data)[0]))
             .catch(err => console.log(err));
     }, [])
+
+    useEffect(() => {
+        axios.get(`http://localhost:3004/sponsor/${id}`)
+            .then(res => setSponsor(Object.values(res.data)))
+            .catch(err => console.log(err));
+    }, [])
+
+    let sponsorlist
+    if(sponsor !== undefined){
+        sponsorlist = sponsor
+    }
+    console.log("sponsrolist " + sponsorlist)
+    sponsor.map(s => {
+        console.log(s)
+    })
 
     let heroscheduletime
     if(schedule.scheduletime !== undefined){
@@ -1106,6 +1122,28 @@ export const Hero = () => {
                                     </tbody>
                                 </table>
                             </li>
+                        </ul>
+                    </div>
+                    <div className="card-footer">
+                        <ul>
+                            <li className='abilities'>
+                                <strong>
+                                    Sponsors
+                                </strong>
+                            </li>
+                            {sponsorlist != undefined ?
+                                sponsorlist.map(sponsor =>
+                                    <li className='card-footer' key={sponsor}>
+                                        <strong>
+                                            {sponsor.name}
+                                            <br /><img src={sponsor.image} alt="hero" width="150" height="150" />
+                                            <br />${sponsor.quantity}
+                                            <br />{sponsor.source}
+                                        </strong>
+                                    </li>)
+                                :
+                                <h1>Loading</h1>
+                            }
                         </ul>
                     </div>
                 </div>
