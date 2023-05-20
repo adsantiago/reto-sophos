@@ -59,6 +59,16 @@ app.get("/villains", (req, res) => {
     );
 })
 
+//All fight
+app.get("/fight", (req, res) => {
+    connection.query(
+        'SELECT * FROM fight',
+        function (err, results, fields) {
+            res.json(results)
+        }
+    );
+})
+
 //Single villain
 app.get("/villain/:id", (req, res) => {
     const { id } = req.params;

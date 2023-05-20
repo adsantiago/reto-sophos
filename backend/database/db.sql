@@ -50,6 +50,15 @@ CREATE TABLE sponsor(
     image varchar(250)
 );
 
+CREATE TABLE fight(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    heroe_id INT,
+    villain_id INT,
+    winner boolean,
+    FOREIGN KEY (heroe_id) REFERENCES heroes(id),
+    FOREIGN KEY (villain_id) REFERENCES villains(id)
+);
+
 -- Heroes
 INSERT INTO heroes (id, name, nickname, age, powers, abilities, gender, specie, allies, enemies, image) VALUES (1, 'Rudolph Conners', 'Robot (alter-ego), Rudy', 'Adulto', 'Robotic Manipulation', 'High Intelligence, Engineering and Robotics Expertise, Tactical Expertise, Linguistics', 'Male', 'Human', 'Invincible, Atom Eve, Rex Splode, Dupli-Kate, Cecil Stedman, Monster Girl, Shrinking Rae, Black Samson', 'Flaxans, Battle Beast, Kursk, Furnace, Magmaniac, Machine Head, Tether Tyrant, Mauler Twins', 'https://raw.githubusercontent.com/adsantiago/reto-sophos/master/backend/images/robot.png'); 
 INSERT INTO heroes (id, name, nickname, age, powers, abilities, gender, specie, allies, enemies, image) VALUES (2, 'Markus Grimshaw', 'Black Samson (alter ego)', 'Adulto', 'N/A', 'Superhuman Strength', 'Male', 'Human', 'Invincible, Robot, Rex Splode, Monster Girl, Shrinking Rae, Dupli-Kate, Cecil Stedman', 'Battle Beast, Machine Head, Isotope, Magmaniac, Furnace, Kursk, Tether Tyrant, Omni-Man', 'https://raw.githubusercontent.com/adsantiago/reto-sophos/master/backend/images/blacksamson.png');
@@ -81,6 +90,28 @@ INSERT INTO schedule (heroe_id, scheduletime, schedule) VALUES (7, '2,09 3,16 5,
 --Sponsor
 INSERT INTO sponsor (name, quantity, source, heroe_id, image) VALUES('Patrocinador A', 100000, 'Fuente A', 1, "https://raw.githubusercontent.com/adsantiago/reto-sophos/master/backend/images/logoA.png");
 INSERT INTO sponsor (name, quantity, source, heroe_id, image) VALUES('Patrocinador B', 500000, 'Fuente B', 1, "https://raw.githubusercontent.com/adsantiago/reto-sophos/master/backend/images/logoB.png");
+INSERT INTO sponsor (name, quantity, source, heroe_id, image) VALUES('Patrocinador C', 250000, 'Fuente C', 2, "https://raw.githubusercontent.com/adsantiago/reto-sophos/master/backend/images/logoC.png");
+INSERT INTO sponsor (name, quantity, source, heroe_id, image) VALUES('Patrocinador D', 150000, 'Fuente D', 2, "https://raw.githubusercontent.com/adsantiago/reto-sophos/master/backend/images/logoD.png");
+INSERT INTO sponsor (name, quantity, source, heroe_id, image) VALUES('Patrocinador E', 200000, 'Fuente E', 3, "https://raw.githubusercontent.com/adsantiago/reto-sophos/master/backend/images/logoE.png");
+INSERT INTO sponsor (name, quantity, source, heroe_id, image) VALUES('Patrocinador F', 300000, 'Fuente F', 3, "https://raw.githubusercontent.com/adsantiago/reto-sophos/master/backend/images/logoF.png");
+INSERT INTO sponsor (name, quantity, source, heroe_id, image) VALUES('Patrocinador G', 350000, 'Fuente G', 4, "https://raw.githubusercontent.com/adsantiago/reto-sophos/master/backend/images/logoG.png");
+INSERT INTO sponsor (name, quantity, source, heroe_id, image) VALUES('Patrocinador H', 150000, 'Fuente H', 4, "https://raw.githubusercontent.com/adsantiago/reto-sophos/master/backend/images/logoH.png");
+INSERT INTO sponsor (name, quantity, source, heroe_id, image) VALUES('Patrocinador I', 250000, 'Fuente I', 5, "https://raw.githubusercontent.com/adsantiago/reto-sophos/master/backend/images/logoI.png");
+INSERT INTO sponsor (name, quantity, source, heroe_id, image) VALUES('Patrocinador J', 385000, 'Fuente J', 5, "https://raw.githubusercontent.com/adsantiago/reto-sophos/master/backend/images/logoJ.png");
+INSERT INTO sponsor (name, quantity, source, heroe_id, image) VALUES('Patrocinador K', 400000, 'Fuente K', 6, "https://raw.githubusercontent.com/adsantiago/reto-sophos/master/backend/images/logoK.png");
+INSERT INTO sponsor (name, quantity, source, heroe_id, image) VALUES('Patrocinador L', 300000, 'Fuente L', 6, "https://raw.githubusercontent.com/adsantiago/reto-sophos/master/backend/images/logoL.png");
+INSERT INTO sponsor (name, quantity, source, heroe_id, image) VALUES('Patrocinador M', 225000, 'Fuente M', 7, "https://raw.githubusercontent.com/adsantiago/reto-sophos/master/backend/images/logoM.png");
+INSERT INTO sponsor (name, quantity, source, heroe_id, image) VALUES('Patrocinador N', 180000, 'Fuente N', 7, "https://raw.githubusercontent.com/adsantiago/reto-sophos/master/backend/images/logoN.png");
+
+--Fight
+INSERT INTO fight (id, heroe_id, villain_id, winner) VALUES(1, 1, 2, true);
+INSERT INTO fight (id, heroe_id, villain_id, winner) VALUES(2, 2, 1, false);
+INSERT INTO fight (id, heroe_id, villain_id, winner) VALUES(3, 3, 3, true);
+INSERT INTO fight (id, heroe_id, villain_id, winner) VALUES(4, 4, 5, false);
+INSERT INTO fight (id, heroe_id, villain_id, winner) VALUES(5, 5, 6, false);
+
+
+
 
 
 

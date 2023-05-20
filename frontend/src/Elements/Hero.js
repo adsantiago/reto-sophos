@@ -34,10 +34,6 @@ export const Hero = () => {
     if(sponsor !== undefined){
         sponsorlist = sponsor
     }
-    console.log("sponsrolist " + sponsorlist)
-    sponsor.map(s => {
-        console.log(s)
-    })
 
     let heroscheduletime
     if(schedule.scheduletime !== undefined){

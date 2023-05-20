@@ -86,7 +86,6 @@ export const Villain = () => {
                                     <li className='card-footer' key={power}>
                                         {power}
                                     </li>)
-
                                 :
                                 <h1>Loading</h1>
                             }
