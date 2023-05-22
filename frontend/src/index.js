@@ -8,6 +8,7 @@ import Container from './Elements/Container';
 import Villains from './Elements/Villains';
 import Villain from './Elements/Villain';
 import Fight from './Elements/Fight';
+import Main from './Elements/Main';
 
 const Index = () => {
   return (
@@ -15,7 +16,7 @@ const Index = () => {
       <BrowserRouter>
         <Container>
           <Routes>
-            <Route path="/" element={
+            <Route path="/heroes" element={
               <App />
             } />
             <Route path="/hero/:id" element={
@@ -29,6 +30,9 @@ const Index = () => {
             } />
             <Route path="/fight/" element={
               <Fight />
+            } />
+            <Route path="/" element={
+              <Main />
             } />
           </Routes>
         </Container>

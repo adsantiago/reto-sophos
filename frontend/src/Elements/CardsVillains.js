@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "react-router-dom"
 import { CardVillain } from './CardVillain'
 import { Header, Title, ContainerHeader } from "./Header"
-import BackBtn from "./BackBtn"
+import {BackBtn} from "./BackBtn"
 
 export const CardsVillains = ({ results }) => {
     return (

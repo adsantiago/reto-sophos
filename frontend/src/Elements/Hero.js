@@ -3,7 +3,7 @@ import axios from 'axios'
 import { useParams } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Header, Title, ContainerHeader } from './Header';
-import BackBtn from './BackBtn';
+import {BackBtnHeroes} from './BackBtn';
 
 export const Hero = () => {
 
@@ -72,7 +72,7 @@ export const Hero = () => {
             <Header>
                 <ContainerHeader>
                     <Title>Heroe</Title>
-                    <BackBtn></BackBtn>
+                    <BackBtnHeroes></BackBtnHeroes>
                 </ContainerHeader>
             </Header>
             <div>

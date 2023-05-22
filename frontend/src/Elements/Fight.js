@@ -3,7 +3,7 @@ import axios from 'axios'
 import { useParams } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Header, Title, ContainerHeader } from './Header';
-import BackBtn from './BackBtn';
+import {BackBtn} from './BackBtn';
 
 export const Fight = () => {
 

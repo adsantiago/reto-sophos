@@ -32,11 +32,25 @@ const Icon = styled(Arrow)`
     fill: #fff;
 `;
 
-const BackBtn = ({ ruta = '/' }) => {
+const BackBtn = ({ route = '/' }) => {
     const navigate = useNavigate();
     return (
-        <Btn onClick={() => navigate(ruta)}><Icon /></Btn>
+        <Btn onClick={() => navigate(route)}><Icon /></Btn>
     );
 }
 
-export default BackBtn;
+const BackBtnHeroes = ({ route = '/heroes' }) => {
+    const navigate = useNavigate();
+    return (
+        <Btn onClick={() => navigate(route)}><Icon /></Btn>
+    );
+}
+
+const BackBtnVillains = ({ route = '/villains' }) => {
+    const navigate = useNavigate();
+    return (
+        <Btn onClick={() => navigate(route)}><Icon /></Btn>
+    );
+}
+
+export { BackBtn, BackBtnHeroes, BackBtnVillains };

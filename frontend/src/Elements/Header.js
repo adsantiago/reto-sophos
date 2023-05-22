@@ -39,4 +39,22 @@ const ContainerHeader = styled.div`
     }
 `;
 
-export { Header, Title, ContainerHeader }
+const ContainerHeaderMain = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: center;
+ 
+    @media(max-width: 60rem){ /* 950px */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+ 
+        & > div {
+            display: flex;
+            margin-bottom: 1.25rem; /* 20px */
+            justify-content: end;
+        }
+    }
+`;
+
+export { Header, Title, ContainerHeader, ContainerHeaderMain }
